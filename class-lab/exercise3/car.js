@@ -16,13 +16,8 @@ class Car {
 class Race {
   cars = [];
 
-  constructor() {
-  }
-
-  addCars(c1, c2, c3) {
-    this.cars[0] = c1;
-    this.cars[1] = c2;
-    this.cars[2] = c3;
+  addCars(...cars) {
+    this.cars = [...cars]
   }
 
   winner() {
