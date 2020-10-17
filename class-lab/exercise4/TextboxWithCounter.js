@@ -5,13 +5,13 @@ class TextboxWithCounter {
     <textarea></textarea>`
     this.counter = el.querySelector('.counter');
     this.textarea = el.querySelector('textarea');
-    this.textarea.addEventListener('keyup',
+    this.textarea.addEventListener('input',
         this.updateCounter);
   }
 
   updateCounter = () => {
     const len = this.textarea.value.length;
-    this.counter.innerHTML = len;
+    this.counter.textContent = len;
   }
 }
 
