@@ -8,17 +8,15 @@ export default function Multiinput(props) {
     setDelta(e.target.value);
   }
 
-  const items = []
-
-  for (let i=0; i < 5; i++) {
-    items.push(<pre><input type="text" value={delta}
-                           onChange={handleChangeDelta}
-                           placeholder="type something ..."/></pre>)
-  }
+  const elements = [1, 2, 3, 4, 5];
 
   return (
       <div>
-        {items}
+        {elements.map((value, index) => {
+          return <pre><input id={index} type="text" value={delta}
+                             onChange={handleChangeDelta}
+                             placeholder="type something ..."/></pre>
+        })}
       </div>
   )
 }
