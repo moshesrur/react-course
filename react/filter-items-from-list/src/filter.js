@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default function Filter(props) {
-  const {filter, setFilter} = props;
+export default function Filter({filter, setFilter}) {
 
   function handleChangeFilter(e) {
     setFilter(e.target.value);

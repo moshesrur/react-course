@@ -4,9 +4,7 @@ import Filteredlist from "./filteredlist";
 
 const App = () => {
   return (
-      <>
         <Filteredlist />
-      </>
   )
 };
 
